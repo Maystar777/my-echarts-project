@@ -2,12 +2,12 @@ import { createWebHistory, createRouter } from 'vue-router'
 
 const routes = [
   {
-    path: '/home',
-    name: 'Home',
-    component: () => import('@/components/Home.vue'),
-    // meta: {
-    //   title: '酷屏首页统计图'
-    // }
+    path: '/echarts',
+    name: 'EchartsHome',
+    component: () => import('@/pages/EchartsHome/index.vue'),
+    meta: {
+      title: 'Echarts实践'
+    }
   },
 ]
 

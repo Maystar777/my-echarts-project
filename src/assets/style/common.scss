@@ -1,0 +1,14 @@
+.sn-container {
+  border: 2px solid rgba(92, 255, 255, 0.1);
+  background: rgba(10, 106, 255, 0.1);
+  .sn-title {
+    font-size: 12px;
+    color: #00c2ff;
+    padding-top: 10px;
+    &:before {
+      content: '▶▶';
+      padding: 0px 5px 0px 10px;
+      color: rgb(215, 105, 65);
+    }
+  }
+}
