@@ -10,7 +10,6 @@ const props = defineProps<{
   height?: string | number
 }>()
 
-
 const chartRef = ref<HTMLElement>()
 let chartInstance: ECharts | null = null
 const observer = new ResizeObserver(() => handleResize())
@@ -43,7 +42,7 @@ watch(
   { deep: true }
 )
 
-const parseSize = (size: string | number) =>
+const parseSize = (size: string | number | undefined) =>
   !size ? '100%' : typeof size === 'number' ? `${size}px` : size
 
 const styleObject = computed(() => ({
