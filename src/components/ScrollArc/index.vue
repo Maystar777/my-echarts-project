@@ -13,7 +13,7 @@ const height = ref<string | number>(200)
 function getEchart() {
   let xData = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
   let data = [54, 86, 46, 77, 96, 89, 88, 23, 38, 3, 66, 98]
-  var option = {
+  let option = {
     // 提示框
     tooltip: {
       trigger: 'axis',
@@ -92,18 +92,16 @@ function getEchart() {
           }
         },
         areaStyle: {
-          normal: {
-            color: new graphic.LinearGradient(0, 0, 0, 1, [
-              {
-                offset: 0,
-                color: '#5d83ff'
-              },
-              {
-                offset: 1,
-                color: 'rgba(0, 0, 0, 0)'
-              }
-            ])
-          }
+          color: new graphic.LinearGradient(0, 0, 0, 1, [
+            {
+              offset: 0,
+              color: '#5d83ff'
+            },
+            {
+              offset: 1,
+              color: 'rgba(0, 0, 0, 0)'
+            }
+          ])
         },
         smooth: true
       }

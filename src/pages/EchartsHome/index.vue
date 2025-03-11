@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import ScrollArc from '@/components/ScrollArc/index.vue'
+import SzBar from '@/components/SzBar/index.vue' // 双轴柱状图
 </script>
 
 <template>
@@ -9,6 +10,7 @@ import ScrollArc from '@/components/ScrollArc/index.vue'
     </div>
     <div class="wrap">
       <ScrollArc class="chart-item flex-item-2" />
+      <SzBar class="chart-item flex-item-2" />
     </div>
   </div>
 </template>
