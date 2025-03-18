@@ -1,5 +1,5 @@
 <!--
-描述: 
+描述: 双轴柱状图
 作者: huangyuhui
 -->
 <script setup lang="ts">

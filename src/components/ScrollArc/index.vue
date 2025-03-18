@@ -1,5 +1,5 @@
 <!--
-描述: 
+描述: 滚动弧形线
 作者: huangyuhui
 -->
 <script setup lang="ts">
