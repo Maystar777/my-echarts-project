@@ -11,9 +11,22 @@ const chartOptions = ref({})
 const height = ref<string | number>(200)
 
 function getEchart() {
-  let xAxisData = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
-  let yData1 = [9, 12, 15, 18, 15, 12, 9, 12, 15, 18, 15, 12]
-  let yData2 = [-9, -12, -15, -18, -15, -12, -9, -12, -15, -18, -15, -12]
+  let source = [
+    ['x', 'y1', 'y2'], // 维度名称
+    [1, 9, -9],
+    [2, 12, -12],
+    [3, 15, -15],
+    [4, 18, -18],
+    [5, 15, -15],
+    [6, 12, -12],
+    [7, 9, -9],
+    [8, 12, -12],
+    [9, 15, -15],
+    [10, 18, -18],
+    [11, 15, -15],
+    [12, 12, -12]
+  ]
+
   let barWidth = '10%'
   let dataCoord = [
     { coord: [0, 9] },
@@ -44,10 +57,12 @@ function getEchart() {
     { coord: [11, -12] }
   ]
   let option = {
+    dataset: {
+      source
+    },
     // X轴
     xAxis: {
-      // X轴数据
-      data: xAxisData,
+      type: 'category', //这个设置之后，第一列会映射到这个轴上，后续每一列对应一个series。
       // x轴轴线
       axisLine: {
         show: true,
@@ -126,7 +141,6 @@ function getEchart() {
           symbolOffset: [0, 0], // 位置偏移
           data: dataCoord
         },
-        data: yData1,
         emphasis: {
           label: {
             show: true,
@@ -168,7 +182,14 @@ function getEchart() {
           symbolOffset: [0, 0],
           data: dataCoord2
         },
-        data: yData2
+        emphasis: {
+          label: {
+            show: true,
+            opacity: 1,
+            color: '#fff',
+            position: 'top'
+          }
+        }
       }
     ]
   }

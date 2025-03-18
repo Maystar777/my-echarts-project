@@ -11,9 +11,24 @@ const chartOptions = ref({})
 const height = ref<string | number>(200)
 
 function getEchart() {
-  let xData = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
-  let data = [54, 86, 46, 77, 96, 89, 88, 23, 38, 3, 66, 98]
   let option = {
+    dataset: {
+      source: [
+        ['x', 'y'], // 维度名称
+        [1, 54],
+        [2, 86],
+        [3, 46],
+        [4, 77],
+        [5, 96],
+        [6, 89],
+        [7, 88],
+        [8, 23],
+        [9, 38],
+        [10, 3],
+        [11, 66],
+        [12, 98]
+      ]
+    },
     // 提示框
     tooltip: {
       trigger: 'axis',
@@ -44,7 +59,7 @@ function getEchart() {
     },
     xAxis: {
       type: 'category',
-      data: xData,
+      // data: xData,
       boundaryGap: false,
       axisTick: {
         show: false
@@ -70,7 +85,7 @@ function getEchart() {
       {
         name: '人数',
         type: 'line',
-        data: data,
+        // data: data,
         symbolSize: 10, //标记的大小
         itemStyle: {
           //折线拐点标志的样式
