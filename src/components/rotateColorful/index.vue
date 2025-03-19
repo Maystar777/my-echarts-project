@@ -162,7 +162,7 @@ onMounted(() => {
   }
   .pie3 {
     background-image: url(../../assets/img/bg-circle3.png);
-    background-size: 40%;
+    background-size: auto 50%;
   }
 }
 
