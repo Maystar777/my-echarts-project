@@ -2,6 +2,7 @@
 import ScrollArc from '@/components/ScrollArc/index.vue'
 import SzBar from '@/components/SzBar/index.vue'
 import ringPin from '@/components/ringPin/index.vue'
+import rotateColorful from '@/components/rotateColorful/index.vue'
 </script>
 
 <template>
@@ -13,6 +14,7 @@ import ringPin from '@/components/ringPin/index.vue'
       <ScrollArc class="chart-item flex-item-2" />
       <SzBar class="chart-item flex-item-2" />
       <ringPin class="chart-item flex-item-4" />
+      <rotateColorful class="chart-item flex-item-4" />
     </div>
   </div>
 </template>
