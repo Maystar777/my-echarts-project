@@ -8,7 +8,7 @@ import BaseChart from '../BaseChart/index.vue'
 import { graphic } from 'echarts/core'
 
 const chartOptions = ref({})
-const height = ref<string | number>(200)
+const height = ref<string | number>(230)
 
 function getEchart() {
   let option = {

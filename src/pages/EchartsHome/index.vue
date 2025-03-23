@@ -1,8 +1,9 @@
 <script setup lang="ts">
 import ScrollArc from '@/components/ScrollArc/index.vue'
 import SzBar from '@/components/SzBar/index.vue'
-import ringPin from '@/components/ringPin/index.vue'
-import rotateColorful from '@/components/rotateColorful/index.vue'
+import RingPin from '@/components/RingPin/index.vue'
+import RotateColorful from '@/components/RotateColorful/index.vue'
+import ColorfulRadar from '@/components/ColorfulRadar/index.vue'
 </script>
 
 <template>
@@ -11,10 +12,12 @@ import rotateColorful from '@/components/rotateColorful/index.vue'
       Echarts 统计图表示例
     </div>
     <div class="wrap">
-      <ScrollArc class="chart-item flex-item-2" />
-      <SzBar class="chart-item flex-item-2" />
-      <ringPin class="chart-item flex-item-4" />
-      <rotateColorful class="chart-item flex-item-4" />
+      <ScrollArc class="flex-item-2" />
+      <SzBar class="flex-item-2" />
+      
+      <RingPin class="flex-item-4" />
+      <RotateColorful class="flex-item-4" />
+      <ColorfulRadar class="flex-item-4" />
     </div>
   </div>
 </template>
