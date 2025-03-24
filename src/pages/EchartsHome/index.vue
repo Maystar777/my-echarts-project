@@ -4,6 +4,7 @@ import SzBar from '@/components/SzBar/index.vue'
 import RingPin from '@/components/RingPin/index.vue'
 import RotateColorful from '@/components/RotateColorful/index.vue'
 import ColorfulRadar from '@/components/ColorfulRadar/index.vue'
+import Gauge from '@/components/Gauge/index.vue'
 </script>
 
 <template>
@@ -14,10 +15,11 @@ import ColorfulRadar from '@/components/ColorfulRadar/index.vue'
     <div class="wrap">
       <ScrollArc class="flex-item-2" />
       <SzBar class="flex-item-2" />
-      
+
       <RingPin class="flex-item-4" />
       <RotateColorful class="flex-item-4" />
       <ColorfulRadar class="flex-item-4" />
+      <Gauge class="flex-item-4" />
     </div>
   </div>
 </template>
@@ -51,7 +53,7 @@ import ColorfulRadar from '@/components/ColorfulRadar/index.vue'
   $divide-parts: 2, 3, 4; // 预定义需要生成的数值
   @each $value in $divide-parts {
     .flex-item-#{$value} {
-      width: calc(100% / $value - 15px); // 根据数值动态计算样式
+      width: calc(100% / $value - 20px); // 根据数值动态计算样式
     }
   }
 

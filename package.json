@@ -12,11 +12,13 @@
     "@types/echarts": "^4.9.22",
     "@types/node": "^22.13.7",
     "echarts": "^5.6.0",
+    "lodash": "^4.17.21",
     "scss": "^0.2.4",
     "vue": "^3.5.13",
     "vue-router": "^4.5.0"
   },
   "devDependencies": {
+    "@types/lodash": "^4.17.16",
     "@vitejs/plugin-vue": "^5.2.1",
     "@vue/tsconfig": "^0.7.0",
     "sass-embedded": "^1.85.1",
