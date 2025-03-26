@@ -5,6 +5,7 @@ import RingPin from '@/components/RingPin/index.vue'
 import RotateColorful from '@/components/RotateColorful/index.vue'
 import ColorfulRadar from '@/components/ColorfulRadar/index.vue'
 import Gauge from '@/components/Gauge/index.vue'
+import CakeLinkage from '@/components/CakeLinkage/index.vue'
 </script>
 
 <template>
@@ -20,6 +21,8 @@ import Gauge from '@/components/Gauge/index.vue'
       <RotateColorful class="flex-item-4" />
       <ColorfulRadar class="flex-item-4" />
       <Gauge class="flex-item-4" />
+
+      <CakeLinkage class="flex-item-2" />
     </div>
   </div>
 </template>
