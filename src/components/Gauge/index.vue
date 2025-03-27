@@ -5,11 +5,16 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
 import BaseChart from '../BaseChart/index.vue'
-import merge from 'lodash/merge'
 
 const chartOptions = ref({})
 const timer = ref(0)
 const height = ref<string | number>(230)
+const data = ref<{ value: number; name: string }[]>([
+  {
+    value: 40,
+    name: 'km/h'
+  }
+])
 
 function getEchart() {
   let option = {
@@ -99,12 +104,7 @@ function getEchart() {
             color: '#fff'
           }
         },
-        data: [
-          {
-            value: 40,
-            name: 'km/h'
-          }
-        ]
+        data: data.value
       }
     ]
   }
@@ -112,18 +112,7 @@ function getEchart() {
   chartOptions.value = { ...chartOptions.value, ...option }
 
   timer.value = setInterval(() => {
-    let option = {
-      series: [
-        {
-          data: [
-            {
-              value: +(Math.random() * 220).toFixed(0)
-            }
-          ]
-        }
-      ]
-    }
-    chartOptions.value = merge({}, chartOptions.value, option)
+    data.value[0].value = +(Math.random() * 220).toFixed(0)
   }, 2000)
 }
 
