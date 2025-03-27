@@ -6,6 +6,7 @@ import RotateColorful from '@/components/RotateColorful/index.vue'
 import ColorfulRadar from '@/components/ColorfulRadar/index.vue'
 import Gauge from '@/components/Gauge/index.vue'
 import CakeLinkage from '@/components/CakeLinkage/index.vue'
+import DynamicLine from '@/components/DynamicLine/index.vue'
 </script>
 
 <template>
@@ -23,6 +24,7 @@ import CakeLinkage from '@/components/CakeLinkage/index.vue'
       <Gauge class="flex-item-4" />
 
       <CakeLinkage class="flex-item-2" />
+      <DynamicLine class="flex-item-2" />
     </div>
   </div>
 </template>
@@ -47,7 +49,7 @@ import CakeLinkage from '@/components/CakeLinkage/index.vue'
   .wrap {
     padding: 20px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     gap: 20px;
     flex-wrap: wrap;
